@@ -1,8 +1,8 @@
 # task-backend-app-with-fast-api
 
 **Prerequisite**
-1. Install [python](https://www.python.org/downloads/)
-2. Install [pip](https://pip.pypa.io/en/stable/installation/)
+1. [Install python](https://www.python.org/downloads/)
+2. [Install pip](https://pip.pypa.io/en/stable/installation/)
 3. > pip install fastapi
 4. > pip install "uvicorn[standard]"
 
