@@ -43,8 +43,6 @@ async def users(data: User):
         if data.tasks_completed is not None:
             new_user.tasks_completed = data.tasks_completed
 
-        if new_user in user_list:
-            raise Exception("Sorry but the user already exist.")
         user_list.append(new_user)
 
         return base_response(
@@ -94,13 +92,11 @@ async def tasks(data: Task):
         if data.submitted_on is not None:
             new_task.submitted_on = data.submitted_on
 
-        if new_task in user_list:
-            raise Exception("Sorry but the user already exist.")
-        user_list.append(new_task)
+        task_list.append(new_task)
 
         return base_response(
             success=True,
-            message="User created successfully",
+            message="Task created successfully",
             data=new_task,
         )
     except Exception as e:
