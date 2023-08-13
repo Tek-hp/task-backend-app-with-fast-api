@@ -8,7 +8,6 @@
 4. > pip install "uvicorn[standard]"
 
 **Ready to go**
-
 Once the above Prerequisites are installed, you can just go ahead
 and clone this repository.
 
