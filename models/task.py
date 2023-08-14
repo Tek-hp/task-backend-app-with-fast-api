@@ -17,5 +17,5 @@ class Task(BaseModel):
     task_status: TaskStatus | None = None
     deadline: str | None = None
     submitted_on: str | None = None
-    assigned_by: str = "User id"
-    assigned_to: str = "User id"
+    assigned_by: str = "Team Lead"
+    assigned_to: str = "Developer"

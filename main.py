@@ -5,13 +5,6 @@ from models.task import Task, TaskStatus
 
 app = FastAPI()
 
-user = User(
-    name="Test name",
-    dob="1997-04-19",
-    email="test@example.com",
-    user_name="user-name",
-)
-
 user_list: list[User] = []
 task_list: list[Task] = []
 
