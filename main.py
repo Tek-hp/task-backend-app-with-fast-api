@@ -11,9 +11,13 @@ task_list: list[Task] = []
 
 @app.get("/")
 def root():
-    return {"content": "task-application"}
+    return {"Task Management Applicaiton": "To see all the methods add /docs to the above url in your brower"}
 
 
+# USERS
+
+
+# Create user
 @app.post("/users")
 async def users(data: User):
     try:
@@ -50,6 +54,8 @@ async def users(data: User):
         )
 
 
+
+# Read Users
 @app.get("/users")
 async def users():
     return base_response(
@@ -58,6 +64,20 @@ async def users():
         data=user_list,
     )
 
+
+# Update User
+@app.patch("/user/update")
+async def updateUser(user_data:User):
+    try:
+       for index, user in enumerate(users):
+           if user.id == user_data.id:
+               user_list[index] = user_data
+               return base_response(success=True, message="Updated user data")
+
+       return base_response(success=False, message= "User not Found, please check the user id and try again.")
+
+    except Exception as e:
+        return base_response(success= False, message=f"{e}")
 
 @app.get("/tasks")
 def tasks():
