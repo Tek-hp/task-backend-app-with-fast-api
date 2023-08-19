@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from models.user import User
-from models.task import Task, TaskStatus
+from models.task import Task
+
 
 
 app = FastAPI()
