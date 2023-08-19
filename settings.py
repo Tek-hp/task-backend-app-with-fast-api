@@ -5,8 +5,9 @@ load_dotenv()
 
 # Mongo Attributes.
 
-USERNAME =  os.getenv('USER_NAME')
-PASS = os.getenv('PASSWWORD_KEY')
+__USERNAME__ =  os.getenv('USER_NAME')
+__PASS__ = os.getenv('PASSWWORD_KEY')
+__CLUSTERNAME__ = os.getenv('CLUSTERNAME')
 
-mongodb_uri = f"mongodb+srv://{USERNAME}:{PASS}@cluster0.ezwy79d.mongodb.net/"
+mongodb_uri = f"mongodb+srv://{__USERNAME__}:{__PASS__}@{__CLUSTERNAME__}.ezwy79d.mongodb.net/"
 

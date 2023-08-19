@@ -11,7 +11,6 @@ class TaskStatus(Enum):
 
 class Task(BaseModel):
     title: str
-    task_id: int
     description: str
     assigned_to: str
     assigned_by: str
@@ -24,7 +23,6 @@ class Task(BaseModel):
             "examples": [
                 {
                 "title": "Dummy Title",
-                "task_id": 123,
                 "description": "This is a dummy description just for test.This is a dummy description just for test.This is a dummy description just for test.This is a dummy description just for test.This is a dummy description just for test.",
                 "assigned_to": "Someone",
                 "assigned_by": "Tek",
